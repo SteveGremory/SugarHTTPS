@@ -1,0 +1,1 @@
+/bin/c++ -g -rdynamic CMakeFiles/SugarHTTP.dir/SugarHTTP.cpp.o -o SugarHTTP  /home/ryder/vcpkg/installed/x64-linux/debug/lib/librestclient-cppd.a /home/ryder/vcpkg/installed/x64-linux/debug/lib/libcurl-d.a /home/ryder/vcpkg/installed/x64-linux/lib/libssl.a /home/ryder/vcpkg/installed/x64-linux/lib/libcrypto.a -ldl /home/ryder/vcpkg/installed/x64-linux/lib/libz.a -lpthread 

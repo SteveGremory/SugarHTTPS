@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/ryder/Documents/HTTP/build",
+  "command": "/bin/c++ -DCURL_STATICLIB -I/home/ryder/Documents/HTTP/source -I/home/ryder/Documents/HTTP/source/HTTPLib -I/home/ryder/Documents/HTTP/source/TheSugarcoat -I/home/ryder/Documents/HTTP/source/json11 -isystem /home/ryder/vcpkg/installed/x64-linux/include -g -std=gnu++17 -o CMakeFiles/SugarHTTP.dir/SugarHTTP.cpp.o -c /home/ryder/Documents/HTTP/SugarHTTP.cpp",
+  "file": "/home/ryder/Documents/HTTP/SugarHTTP.cpp"
+}
+]
