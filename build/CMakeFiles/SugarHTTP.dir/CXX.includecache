@@ -6,25 +6,27 @@
 
 #IncludeRegexTransform: 
 
-../source/TheSugarcoat/sugarRequests.hpp
-iostream
--
-restclient-cpp/restclient.h
-../source/TheSugarcoat/restclient-cpp/restclient.h
-restclient-cpp/connection.h
-../source/TheSugarcoat/restclient-cpp/connection.h
-
-/home/ryder/Documents/HTTP/SugarHTTP.cpp
+/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/include/SugarHTTP.cpp
 iostream
 -
 sugarRequests.hpp
-/home/ryder/Documents/HTTP/sugarRequests.hpp
+/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/include/sugarRequests.hpp
+pthread.h
+-
 
-/home/ryder/vcpkg/installed/x64-linux/include/curl/curl.h
+/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/include/sugarRequests.hpp
+iostream
+-
+restclient-cpp/restclient.h
+/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/include/restclient-cpp/restclient.h
+restclient-cpp/connection.h
+/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/include/restclient-cpp/connection.h
+
+/Users/stevegremory/vcpkg/installed/x64-osx/include/curl/curl.h
 curlver.h
-/home/ryder/vcpkg/installed/x64-linux/include/curl/curlver.h
+/Users/stevegremory/vcpkg/installed/x64-osx/include/curl/curlver.h
 system.h
-/home/ryder/vcpkg/installed/x64-linux/include/curl/system.h
+/Users/stevegremory/vcpkg/installed/x64-osx/include/curl/system.h
 stdio.h
 -
 limits.h
@@ -48,27 +50,27 @@ sys/time.h
 support/SupportDefs.h
 -
 easy.h
-/home/ryder/vcpkg/installed/x64-linux/include/curl/easy.h
+/Users/stevegremory/vcpkg/installed/x64-osx/include/curl/easy.h
 multi.h
-/home/ryder/vcpkg/installed/x64-linux/include/curl/multi.h
+/Users/stevegremory/vcpkg/installed/x64-osx/include/curl/multi.h
 urlapi.h
-/home/ryder/vcpkg/installed/x64-linux/include/curl/urlapi.h
+/Users/stevegremory/vcpkg/installed/x64-osx/include/curl/urlapi.h
 options.h
-/home/ryder/vcpkg/installed/x64-linux/include/curl/options.h
+/Users/stevegremory/vcpkg/installed/x64-osx/include/curl/options.h
 typecheck-gcc.h
-/home/ryder/vcpkg/installed/x64-linux/include/curl/typecheck-gcc.h
+/Users/stevegremory/vcpkg/installed/x64-osx/include/curl/typecheck-gcc.h
 
-/home/ryder/vcpkg/installed/x64-linux/include/curl/curlver.h
+/Users/stevegremory/vcpkg/installed/x64-osx/include/curl/curlver.h
 
-/home/ryder/vcpkg/installed/x64-linux/include/curl/easy.h
+/Users/stevegremory/vcpkg/installed/x64-osx/include/curl/easy.h
 
-/home/ryder/vcpkg/installed/x64-linux/include/curl/multi.h
+/Users/stevegremory/vcpkg/installed/x64-osx/include/curl/multi.h
 curl.h
-/home/ryder/vcpkg/installed/x64-linux/include/curl/curl.h
+/Users/stevegremory/vcpkg/installed/x64-osx/include/curl/curl.h
 
-/home/ryder/vcpkg/installed/x64-linux/include/curl/options.h
+/Users/stevegremory/vcpkg/installed/x64-osx/include/curl/options.h
 
-/home/ryder/vcpkg/installed/x64-linux/include/curl/system.h
+/Users/stevegremory/vcpkg/installed/x64-osx/include/curl/system.h
 winsock2.h
 -
 windows.h
@@ -82,13 +84,13 @@ sys/socket.h
 sys/poll.h
 -
 
-/home/ryder/vcpkg/installed/x64-linux/include/curl/typecheck-gcc.h
+/Users/stevegremory/vcpkg/installed/x64-osx/include/curl/typecheck-gcc.h
 
-/home/ryder/vcpkg/installed/x64-linux/include/curl/urlapi.h
+/Users/stevegremory/vcpkg/installed/x64-osx/include/curl/urlapi.h
 curl.h
-/home/ryder/vcpkg/installed/x64-linux/include/curl/curl.h
+/Users/stevegremory/vcpkg/installed/x64-osx/include/curl/curl.h
 
-/home/ryder/vcpkg/installed/x64-linux/include/restclient-cpp/connection.h
+/Users/stevegremory/vcpkg/installed/x64-osx/include/restclient-cpp/connection.h
 curl/curl.h
 -
 string
@@ -98,11 +100,11 @@ map
 cstdlib
 -
 restclient-cpp/restclient.h
-/home/ryder/vcpkg/installed/x64-linux/include/restclient-cpp/restclient-cpp/restclient.h
+/Users/stevegremory/vcpkg/installed/x64-osx/include/restclient-cpp/restclient-cpp/restclient.h
 restclient-cpp/version.h
-/home/ryder/vcpkg/installed/x64-linux/include/restclient-cpp/restclient-cpp/version.h
+/Users/stevegremory/vcpkg/installed/x64-osx/include/restclient-cpp/restclient-cpp/version.h
 
-/home/ryder/vcpkg/installed/x64-linux/include/restclient-cpp/restclient.h
+/Users/stevegremory/vcpkg/installed/x64-osx/include/restclient-cpp/restclient.h
 string
 -
 map
@@ -110,7 +112,7 @@ map
 cstdlib
 -
 restclient-cpp/version.h
-/home/ryder/vcpkg/installed/x64-linux/include/restclient-cpp/restclient-cpp/version.h
+/Users/stevegremory/vcpkg/installed/x64-osx/include/restclient-cpp/restclient-cpp/version.h
 
-/home/ryder/vcpkg/installed/x64-linux/include/restclient-cpp/version.h
+/Users/stevegremory/vcpkg/installed/x64-osx/include/restclient-cpp/version.h
 

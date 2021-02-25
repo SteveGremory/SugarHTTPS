@@ -1,7 +1,12 @@
 [
 {
-  "directory": "/home/ryder/Documents/HTTP/build",
-  "command": "/bin/c++ -DCURL_STATICLIB -I/home/ryder/Documents/HTTP/source -I/home/ryder/Documents/HTTP/source/HTTPLib -I/home/ryder/Documents/HTTP/source/TheSugarcoat -I/home/ryder/Documents/HTTP/source/json11 -isystem /home/ryder/vcpkg/installed/x64-linux/include -g -std=gnu++17 -o CMakeFiles/SugarHTTP.dir/SugarHTTP.cpp.o -c /home/ryder/Documents/HTTP/SugarHTTP.cpp",
-  "file": "/home/ryder/Documents/HTTP/SugarHTTP.cpp"
+  "directory": "/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/build",
+  "command": "/usr/bin/clang++ -DCURL_STATICLIB -I/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/include -isystem /Users/stevegremory/vcpkg/installed/x64-osx/include -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -std=gnu++17 -o CMakeFiles/SugarHTTPS.dir/include/SugarHTTPS.cpp.o -c /Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/include/SugarHTTPS.cpp",
+  "file": "/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/include/SugarHTTPS.cpp"
+},
+{
+  "directory": "/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/build",
+  "command": "/usr/bin/clang++ -DCURL_STATICLIB -I/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/include -isystem /Users/stevegremory/vcpkg/installed/x64-osx/include -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -std=gnu++17 -o CMakeFiles/SugarHTTPS.dir/main.cpp.o -c /Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/main.cpp",
+  "file": "/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/main.cpp"
 }
 ]

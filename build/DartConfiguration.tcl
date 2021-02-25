@@ -4,17 +4,17 @@
 
 
 # Configuration directories and files
-SourceDirectory: /home/ryder/Documents/HTTP
-BuildDirectory: /home/ryder/Documents/HTTP/build
+SourceDirectory: /Users/stevegremory/Desktop/PANCAKE/SugarHTTPS
+BuildDirectory: /Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/build
 
 # Where to place the cost data store
 CostDataFile: 
 
 # Site is something like machine.domain, i.e. pragmatic.crd
-Site: Busta
+Site: Steves-MacBook-Pro.local
 
 # Build name is osname-revision-compiler, i.e. Linux-2.4.2-2smp-c++
-BuildName: Linux-c++
+BuildName: Darwin-clang++
 
 # Subprojects
 LabelsForSubprojects: 
@@ -26,8 +26,8 @@ SubmitURL: http://
 NightlyStartTime: 00:00:00 EDT
 
 # Commands for the build/test/submit cycle
-ConfigureCommand: "/usr/local/bin/cmake" "/home/ryder/Documents/HTTP"
-MakeCommand: /usr/local/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}" -- -i
+ConfigureCommand: "/Applications/CMake.app/Contents/bin/cmake" "/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS"
+MakeCommand: /Applications/CMake.app/Contents/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}" -- -i
 DefaultCTestConfigurationType: Release
 
 # version control
@@ -44,7 +44,7 @@ SVNOptions:
 SVNUpdateOptions: 
 
 # Git options
-GITCommand: /usr/bin/git
+GITCommand: /usr/local/bin/git
 GITInitSubmodules: 
 GITUpdateOptions: 
 GITUpdateCustom: 
@@ -57,13 +57,13 @@ P4UpdateOptions:
 P4UpdateCustom: 
 
 # Generic update command
-UpdateCommand: 
+UpdateCommand: /usr/local/bin/git
 UpdateOptions: 
-UpdateType: 
+UpdateType: git
 
 # Compiler info
-Compiler: /bin/c++
-CompilerVersion: 8.3.0
+Compiler: /usr/bin/clang++
+CompilerVersion: 12.0.0.12000032
 
 # Dynamic analysis (MemCheck)
 PurifyCommand: 

@@ -53,19 +53,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/bin/cmake
+CMAKE_COMMAND = /Applications/CMake.app/Contents/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/bin/cmake -E rm -f
+RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ryder/Documents/HTTP
+CMAKE_SOURCE_DIR = /Users/stevegremory/Desktop/PANCAKE/SugarHTTPS
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ryder/Documents/HTTP/build
+CMAKE_BINARY_DIR = /Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/SugarHTTP.dir/depend.make
@@ -76,35 +76,48 @@ include CMakeFiles/SugarHTTP.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/SugarHTTP.dir/flags.make
 
-CMakeFiles/SugarHTTP.dir/SugarHTTP.cpp.o: CMakeFiles/SugarHTTP.dir/flags.make
-CMakeFiles/SugarHTTP.dir/SugarHTTP.cpp.o: ../SugarHTTP.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ryder/Documents/HTTP/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/SugarHTTP.dir/SugarHTTP.cpp.o"
-	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SugarHTTP.dir/SugarHTTP.cpp.o -c /home/ryder/Documents/HTTP/SugarHTTP.cpp
+CMakeFiles/SugarHTTP.dir/include/SugarHTTP.cpp.o: CMakeFiles/SugarHTTP.dir/flags.make
+CMakeFiles/SugarHTTP.dir/include/SugarHTTP.cpp.o: ../include/SugarHTTP.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/SugarHTTP.dir/include/SugarHTTP.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SugarHTTP.dir/include/SugarHTTP.cpp.o -c /Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/include/SugarHTTP.cpp
 
-CMakeFiles/SugarHTTP.dir/SugarHTTP.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SugarHTTP.dir/SugarHTTP.cpp.i"
-	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ryder/Documents/HTTP/SugarHTTP.cpp > CMakeFiles/SugarHTTP.dir/SugarHTTP.cpp.i
+CMakeFiles/SugarHTTP.dir/include/SugarHTTP.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SugarHTTP.dir/include/SugarHTTP.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/include/SugarHTTP.cpp > CMakeFiles/SugarHTTP.dir/include/SugarHTTP.cpp.i
 
-CMakeFiles/SugarHTTP.dir/SugarHTTP.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SugarHTTP.dir/SugarHTTP.cpp.s"
-	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ryder/Documents/HTTP/SugarHTTP.cpp -o CMakeFiles/SugarHTTP.dir/SugarHTTP.cpp.s
+CMakeFiles/SugarHTTP.dir/include/SugarHTTP.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SugarHTTP.dir/include/SugarHTTP.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/include/SugarHTTP.cpp -o CMakeFiles/SugarHTTP.dir/include/SugarHTTP.cpp.s
+
+CMakeFiles/SugarHTTP.dir/main.cpp.o: CMakeFiles/SugarHTTP.dir/flags.make
+CMakeFiles/SugarHTTP.dir/main.cpp.o: ../main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/SugarHTTP.dir/main.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SugarHTTP.dir/main.cpp.o -c /Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/main.cpp
+
+CMakeFiles/SugarHTTP.dir/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SugarHTTP.dir/main.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/main.cpp > CMakeFiles/SugarHTTP.dir/main.cpp.i
+
+CMakeFiles/SugarHTTP.dir/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SugarHTTP.dir/main.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/main.cpp -o CMakeFiles/SugarHTTP.dir/main.cpp.s
 
 # Object files for target SugarHTTP
 SugarHTTP_OBJECTS = \
-"CMakeFiles/SugarHTTP.dir/SugarHTTP.cpp.o"
+"CMakeFiles/SugarHTTP.dir/include/SugarHTTP.cpp.o" \
+"CMakeFiles/SugarHTTP.dir/main.cpp.o"
 
 # External object files for target SugarHTTP
 SugarHTTP_EXTERNAL_OBJECTS =
 
-SugarHTTP: CMakeFiles/SugarHTTP.dir/SugarHTTP.cpp.o
+SugarHTTP: CMakeFiles/SugarHTTP.dir/include/SugarHTTP.cpp.o
+SugarHTTP: CMakeFiles/SugarHTTP.dir/main.cpp.o
 SugarHTTP: CMakeFiles/SugarHTTP.dir/build.make
-SugarHTTP: /home/ryder/vcpkg/installed/x64-linux/debug/lib/librestclient-cppd.a
-SugarHTTP: /home/ryder/vcpkg/installed/x64-linux/debug/lib/libcurl-d.a
-SugarHTTP: /home/ryder/vcpkg/installed/x64-linux/lib/libssl.a
-SugarHTTP: /home/ryder/vcpkg/installed/x64-linux/lib/libcrypto.a
-SugarHTTP: /home/ryder/vcpkg/installed/x64-linux/lib/libz.a
+SugarHTTP: /Users/stevegremory/vcpkg/installed/x64-osx/debug/lib/librestclient-cppd.a
+SugarHTTP: /Users/stevegremory/vcpkg/installed/x64-osx/debug/lib/libcurl-d.a
+SugarHTTP: /Users/stevegremory/vcpkg/installed/x64-osx/lib/libz.a
 SugarHTTP: CMakeFiles/SugarHTTP.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ryder/Documents/HTTP/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable SugarHTTP"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable SugarHTTP"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SugarHTTP.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -117,6 +130,6 @@ CMakeFiles/SugarHTTP.dir/clean:
 .PHONY : CMakeFiles/SugarHTTP.dir/clean
 
 CMakeFiles/SugarHTTP.dir/depend:
-	cd /home/ryder/Documents/HTTP/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ryder/Documents/HTTP /home/ryder/Documents/HTTP /home/ryder/Documents/HTTP/build /home/ryder/Documents/HTTP/build /home/ryder/Documents/HTTP/build/CMakeFiles/SugarHTTP.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/stevegremory/Desktop/PANCAKE/SugarHTTPS /Users/stevegremory/Desktop/PANCAKE/SugarHTTPS /Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/build /Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/build /Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/build/CMakeFiles/SugarHTTP.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/SugarHTTP.dir/depend
 

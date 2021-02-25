@@ -4,9 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/ryder/Documents/HTTP/SugarHTTP.cpp" "/home/ryder/Documents/HTTP/build/CMakeFiles/SugarHTTP.dir/SugarHTTP.cpp.o"
+  "/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/include/SugarHTTP.cpp" "/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/build/CMakeFiles/SugarHTTP.dir/include/SugarHTTP.cpp.o"
+  "/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/main.cpp" "/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/build/CMakeFiles/SugarHTTP.dir/main.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "GNU")
+set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
@@ -15,11 +16,8 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "../source"
-  "../source/HTTPLib"
-  "../source/TheSugarcoat"
-  "../source/json11"
-  "/home/ryder/vcpkg/installed/x64-linux/include"
+  "../include"
+  "/Users/stevegremory/vcpkg/installed/x64-osx/include"
   )
 
 # Targets to which this target links.

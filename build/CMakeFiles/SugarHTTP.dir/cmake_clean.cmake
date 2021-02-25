@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/SugarHTTP.dir/SugarHTTP.cpp.o"
+  "CMakeFiles/SugarHTTP.dir/include/SugarHTTP.cpp.o"
+  "CMakeFiles/SugarHTTP.dir/main.cpp.o"
   "SugarHTTP"
   "SugarHTTP.pdb"
 )

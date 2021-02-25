@@ -7,7 +7,7 @@
 import os
 
 buildConfiguration = "debug"
-ProjectName = "SugarHTTP"
+ProjectName = "SugarHTTPS"
 
 
 class bcolors:
@@ -27,6 +27,8 @@ print(f"{bcolors.HEADER}===================={bcolors.ENDC}\n")
 print(f"{bcolors.WARNING}[BUILDING]{bcolors.ENDC}\n")
 
 print(f"{bcolors.HEADER}===================={bcolors.ENDC}\n")
+
+os.system("cd build && rm - rf ./"+ProjectName+" && cd ..")
 
 os.system("cmake --build build --config "+buildConfiguration+
           " --target clean -- && cd build && make")

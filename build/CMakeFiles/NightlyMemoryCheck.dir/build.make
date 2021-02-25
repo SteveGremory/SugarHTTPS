@@ -53,19 +53,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/bin/cmake
+CMAKE_COMMAND = /Applications/CMake.app/Contents/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/bin/cmake -E rm -f
+RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ryder/Documents/HTTP
+CMAKE_SOURCE_DIR = /Users/stevegremory/Desktop/PANCAKE/SugarHTTPS
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ryder/Documents/HTTP/build
+CMAKE_BINARY_DIR = /Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/build
 
 # Utility rule file for NightlyMemoryCheck.
 
@@ -73,7 +73,7 @@ CMAKE_BINARY_DIR = /home/ryder/Documents/HTTP/build
 include CMakeFiles/NightlyMemoryCheck.dir/progress.make
 
 CMakeFiles/NightlyMemoryCheck:
-	/usr/local/bin/ctest -D NightlyMemoryCheck
+	/Applications/CMake.app/Contents/bin/ctest -D NightlyMemoryCheck
 
 NightlyMemoryCheck: CMakeFiles/NightlyMemoryCheck
 NightlyMemoryCheck: CMakeFiles/NightlyMemoryCheck.dir/build.make
@@ -90,6 +90,6 @@ CMakeFiles/NightlyMemoryCheck.dir/clean:
 .PHONY : CMakeFiles/NightlyMemoryCheck.dir/clean
 
 CMakeFiles/NightlyMemoryCheck.dir/depend:
-	cd /home/ryder/Documents/HTTP/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ryder/Documents/HTTP /home/ryder/Documents/HTTP /home/ryder/Documents/HTTP/build /home/ryder/Documents/HTTP/build /home/ryder/Documents/HTTP/build/CMakeFiles/NightlyMemoryCheck.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/stevegremory/Desktop/PANCAKE/SugarHTTPS /Users/stevegremory/Desktop/PANCAKE/SugarHTTPS /Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/build /Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/build /Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/build/CMakeFiles/NightlyMemoryCheck.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/NightlyMemoryCheck.dir/depend
 
