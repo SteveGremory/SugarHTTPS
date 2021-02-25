@@ -21,6 +21,9 @@ add_executable(${PROJECT_NAME}
 find_package(restclient-cpp CONFIG REQUIRED)
 target_link_libraries(${PROJECT_NAME} PRIVATE restclient-cpp)
 
+find_package(CURL CONFIG REQUIRED)
+target_link_libraries(${PROJECT_NAME} PRIVATE CURL::libcurl)
+
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 include(CPack)

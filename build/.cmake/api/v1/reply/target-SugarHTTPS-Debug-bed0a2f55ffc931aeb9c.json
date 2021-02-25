@@ -36,6 +36,12 @@
 				"parent" : 0
 			},
 			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 25,
+				"parent" : 0
+			},
+			{
 				"command" : 2,
 				"file" : 0,
 				"line" : 12,
@@ -65,7 +71,7 @@
 			"includes" : 
 			[
 				{
-					"backtrace" : 3,
+					"backtrace" : 4,
 					"path" : "/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/include"
 				},
 				{
@@ -109,6 +115,7 @@
 				"role" : "libraries"
 			},
 			{
+				"backtrace" : 3,
 				"fragment" : "/Users/stevegremory/vcpkg/installed/x64-osx/debug/lib/libcurl-d.a",
 				"role" : "libraries"
 			},

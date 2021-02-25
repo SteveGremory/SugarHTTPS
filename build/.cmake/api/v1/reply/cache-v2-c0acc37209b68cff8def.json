@@ -1694,6 +1694,18 @@
 			"value" : "[TRUE][v()]"
 		},
 		{
+			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_ZLIB",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Details about finding ZLIB"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "[/Users/stevegremory/vcpkg/installed/x64-osx/lib/libz.a][/Users/stevegremory/vcpkg/installed/x64-osx/include][v1.2.11(1)]"
+		},
+		{
 			"name" : "GITCOMMAND",
 			"properties" : 
 			[

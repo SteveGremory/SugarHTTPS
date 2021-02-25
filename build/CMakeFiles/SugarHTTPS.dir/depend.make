@@ -15,7 +15,6 @@ CMakeFiles/SugarHTTPS.dir/include/SugarHTTPS.cpp.o: /Users/stevegremory/vcpkg/in
 CMakeFiles/SugarHTTPS.dir/include/SugarHTTPS.cpp.o: /Users/stevegremory/vcpkg/installed/x64-osx/include/restclient-cpp/restclient.h
 CMakeFiles/SugarHTTPS.dir/include/SugarHTTPS.cpp.o: /Users/stevegremory/vcpkg/installed/x64-osx/include/restclient-cpp/version.h
 
-CMakeFiles/SugarHTTPS.dir/main.cpp.o: ../include/SugarHTTPS.hpp
 CMakeFiles/SugarHTTPS.dir/main.cpp.o: ../main.cpp
 CMakeFiles/SugarHTTPS.dir/main.cpp.o: /Users/stevegremory/vcpkg/installed/x64-osx/include/curl/curl.h
 CMakeFiles/SugarHTTPS.dir/main.cpp.o: /Users/stevegremory/vcpkg/installed/x64-osx/include/curl/curlver.h
@@ -25,7 +24,4 @@ CMakeFiles/SugarHTTPS.dir/main.cpp.o: /Users/stevegremory/vcpkg/installed/x64-os
 CMakeFiles/SugarHTTPS.dir/main.cpp.o: /Users/stevegremory/vcpkg/installed/x64-osx/include/curl/system.h
 CMakeFiles/SugarHTTPS.dir/main.cpp.o: /Users/stevegremory/vcpkg/installed/x64-osx/include/curl/typecheck-gcc.h
 CMakeFiles/SugarHTTPS.dir/main.cpp.o: /Users/stevegremory/vcpkg/installed/x64-osx/include/curl/urlapi.h
-CMakeFiles/SugarHTTPS.dir/main.cpp.o: /Users/stevegremory/vcpkg/installed/x64-osx/include/restclient-cpp/connection.h
-CMakeFiles/SugarHTTPS.dir/main.cpp.o: /Users/stevegremory/vcpkg/installed/x64-osx/include/restclient-cpp/restclient.h
-CMakeFiles/SugarHTTPS.dir/main.cpp.o: /Users/stevegremory/vcpkg/installed/x64-osx/include/restclient-cpp/version.h
 

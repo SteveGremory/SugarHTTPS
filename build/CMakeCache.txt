@@ -578,6 +578,8 @@ DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
 FIND_PACKAGE_MESSAGE_DETAILS_CURL:INTERNAL=[/Users/stevegremory/vcpkg/installed/x64-osx/share/curl/CURLConfig.cmake][c ][v7.74.0-DEV()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
+//Details about finding ZLIB
+FIND_PACKAGE_MESSAGE_DETAILS_ZLIB:INTERNAL=[/Users/stevegremory/vcpkg/installed/x64-osx/lib/libz.a][/Users/stevegremory/vcpkg/installed/x64-osx/include][v1.2.11(1)]
 //ADVANCED property for variable: GITCOMMAND
 GITCOMMAND-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: HGCOMMAND
