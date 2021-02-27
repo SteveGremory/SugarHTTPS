@@ -1,7 +1,8 @@
-#include "SugarHTTPS.hpp"
-#include <iostream>
+#include "SugarHTTPS_RestClient.hpp"
 #include "restclient-cpp/restclient.h"
 #include "restclient-cpp/connection.h"
+#include <iostream>
+
 namespace sugar {
     RestClient::Response get(std::string url, bool allowRedicts, int redictsCount, int timeout, std::string userAgent) {
         // initialize RestClient

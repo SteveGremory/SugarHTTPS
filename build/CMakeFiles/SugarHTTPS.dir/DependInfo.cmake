@@ -4,7 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/include/SugarHTTPS.cpp" "/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/build/CMakeFiles/SugarHTTPS.dir/include/SugarHTTPS.cpp.o"
+  "/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/include/RestClient_Implementation/SugarHTTPS_RestClient.cpp" "/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/build/CMakeFiles/SugarHTTPS.dir/include/RestClient_Implementation/SugarHTTPS_RestClient.cpp.o"
+  "/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/include/cURL_Implementation/SugarHTTPS_cURL.cpp" "/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/build/CMakeFiles/SugarHTTPS.dir/include/cURL_Implementation/SugarHTTPS_cURL.cpp.o"
   "/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/main.cpp" "/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/build/CMakeFiles/SugarHTTPS.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
@@ -17,6 +18,8 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../include"
+  "../include/RestClient_Implementation"
+  "../include/cURL_Implementation"
   "/Users/stevegremory/vcpkg/installed/x64-osx/include"
   )
 

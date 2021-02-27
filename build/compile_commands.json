@@ -1,12 +1,17 @@
 [
 {
   "directory": "/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/build",
-  "command": "/usr/bin/clang++ -DCURL_STATICLIB -I/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/include -isystem /Users/stevegremory/vcpkg/installed/x64-osx/include -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -std=gnu++17 -o CMakeFiles/SugarHTTPS.dir/include/SugarHTTPS.cpp.o -c /Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/include/SugarHTTPS.cpp",
-  "file": "/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/include/SugarHTTPS.cpp"
+  "command": "/usr/bin/clang++ -DCURL_STATICLIB -I/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/include -I/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/include/RestClient_Implementation -I/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/include/cURL_Implementation -isystem /Users/stevegremory/vcpkg/installed/x64-osx/include -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -std=gnu++2a -o CMakeFiles/SugarHTTPS.dir/include/RestClient_Implementation/SugarHTTPS_RestClient.cpp.o -c /Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/include/RestClient_Implementation/SugarHTTPS_RestClient.cpp",
+  "file": "/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/include/RestClient_Implementation/SugarHTTPS_RestClient.cpp"
 },
 {
   "directory": "/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/build",
-  "command": "/usr/bin/clang++ -DCURL_STATICLIB -I/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/include -isystem /Users/stevegremory/vcpkg/installed/x64-osx/include -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -std=gnu++17 -o CMakeFiles/SugarHTTPS.dir/main.cpp.o -c /Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/main.cpp",
+  "command": "/usr/bin/clang++ -DCURL_STATICLIB -I/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/include -I/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/include/RestClient_Implementation -I/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/include/cURL_Implementation -isystem /Users/stevegremory/vcpkg/installed/x64-osx/include -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -std=gnu++2a -o CMakeFiles/SugarHTTPS.dir/include/cURL_Implementation/SugarHTTPS_cURL.cpp.o -c /Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/include/cURL_Implementation/SugarHTTPS_cURL.cpp",
+  "file": "/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/include/cURL_Implementation/SugarHTTPS_cURL.cpp"
+},
+{
+  "directory": "/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/build",
+  "command": "/usr/bin/clang++ -DCURL_STATICLIB -I/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/include -I/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/include/RestClient_Implementation -I/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/include/cURL_Implementation -isystem /Users/stevegremory/vcpkg/installed/x64-osx/include -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -std=gnu++2a -o CMakeFiles/SugarHTTPS.dir/main.cpp.o -c /Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/main.cpp",
   "file": "/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/main.cpp"
 }
 ]

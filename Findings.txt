@@ -1,0 +1,8 @@
+Single thread, With mutex = 0.01s user 0.01s system 0% cpu 11.071 total; 10 requests, 10 for loop
+
+Single thread, Without mutex = 0.01s user 0.02s system 0% cpu 9.192 total; 10 requests, 10 for loop
+
+Double threads, With mutex = 0.02s user 0.03s system 0% cpu 17.493 total; 20 requests, 10 loop
+
+Double threads Without mutex = 0.02s user 0.03s system 0% cpu 16.671 total; 20 requests, 10 loop
+

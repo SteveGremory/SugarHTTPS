@@ -1,14 +1,15 @@
-#
-# -> COPYRIGHT RiemannOS, 2021
-# -> ALL SOURCE CODE is proprietary and hence is PRIVATE PROPERTY
-# -> COPYING/STEALING source code WITHOUT CONSENT will result VIOLATION of terms.
-#
+#!/usr/bin/env python3
 
 import os
 
 buildConfiguration = "debug"
 ProjectName = "SugarHTTPS"
 
+#
+# -> COPYRIGHT RiemannOS, 2021
+# -> ALL SOURCE CODE is proprietary and hence is PRIVATE PROPERTY
+# -> COPYING/STEALING source code WITHOUT CONSENT will result VIOLATION of terms.
+#
 
 class bcolors:
     HEADER = '\033[95m'
@@ -28,7 +29,7 @@ print(f"{bcolors.WARNING}[BUILDING]{bcolors.ENDC}\n")
 
 print(f"{bcolors.HEADER}===================={bcolors.ENDC}\n")
 
-os.system("cd build && rm - rf ./"+ProjectName+" && cd ..")
+os.system("cd build && rm -rf ./"+ProjectName+" && cd ..")
 
 os.system("cmake --build build --config "+buildConfiguration+
           " --target clean -- && cd build && make")

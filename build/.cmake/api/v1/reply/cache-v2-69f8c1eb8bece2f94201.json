@@ -166,10 +166,6 @@
 			"properties" : 
 			[
 				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
 					"name" : "HELPSTRING",
 					"value" : "Path to ctest program executable."
 				}
@@ -1984,6 +1980,18 @@
 			],
 			"type" : "PATH",
 			"value" : "/Users/stevegremory/vcpkg/installed/x64-osx/share/restclient-cpp"
+		},
+		{
+			"name" : "unofficial-curlpp_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for unofficial-curlpp."
+				}
+			],
+			"type" : "PATH",
+			"value" : "/Users/stevegremory/vcpkg/installed/x64-osx/share/unofficial-curlpp"
 		}
 	],
 	"kind" : "cache",

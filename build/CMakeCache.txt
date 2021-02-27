@@ -372,6 +372,9 @@ ZLIB_LIBRARY_RELEASE:FILEPATH=/Users/stevegremory/vcpkg/installed/x64-osx/lib/li
 //The directory containing a CMake configuration file for restclient-cpp.
 restclient-cpp_DIR:PATH=/Users/stevegremory/vcpkg/installed/x64-osx/share/restclient-cpp
 
+//The directory containing a CMake configuration file for unofficial-curlpp.
+unofficial-curlpp_DIR:PATH=/Users/stevegremory/vcpkg/installed/x64-osx/share/unofficial-curlpp
+
 
 ########################
 # INTERNAL cache entries
@@ -397,8 +400,6 @@ CMAKE_COLOR_MAKEFILE-ADVANCED:INTERNAL=1
 CMAKE_COMMAND:INTERNAL=/Applications/CMake.app/Contents/bin/cmake
 //Path to cpack program executable.
 CMAKE_CPACK_COMMAND:INTERNAL=/Applications/CMake.app/Contents/bin/cpack
-//ADVANCED property for variable: CMAKE_CTEST_COMMAND
-CMAKE_CTEST_COMMAND-ADVANCED:INTERNAL=1
 //Path to ctest program executable.
 CMAKE_CTEST_COMMAND:INTERNAL=/Applications/CMake.app/Contents/bin/ctest
 //ADVANCED property for variable: CMAKE_CXX_COMPILER
