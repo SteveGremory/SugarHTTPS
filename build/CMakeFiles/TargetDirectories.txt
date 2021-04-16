@@ -1,6 +1,0 @@
-/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/build/CMakeFiles/test.dir
-/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/build/CMakeFiles/edit_cache.dir
-/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/build/CMakeFiles/rebuild_cache.dir
-/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/build/CMakeFiles/package_source.dir
-/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/build/CMakeFiles/package.dir
-/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/build/CMakeFiles/SugarHTTPS.dir
