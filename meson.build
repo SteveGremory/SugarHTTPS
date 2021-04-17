@@ -1,6 +1,7 @@
-project('Something', ['cpp', 'c'])
+project('SugarHTTPS', 'cpp')
 incdir = include_directories(
     'include'
 )
-libs  = [dependency('curl')]
-executable('Something', ['src/main.cpp'], include_directories: incdir, dependencies: libs)
+libs  = [dependency('libcurl')]
+executable('SugarHTTPS', ['src/main.cpp'], include_directories: incdir, dependencies: libs, override_options : ['cpp_std=c++2a'])
+    

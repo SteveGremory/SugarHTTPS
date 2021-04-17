@@ -1,8 +1,8 @@
 [
   {
     "directory": "/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/build",
-    "command": "c++ -ISomething.p -I. -I.. -I../include -I/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include -Xclang -fcolor-diagnostics -pipe -Wall -Winvalid-pch -Wnon-virtual-dtor -g -MD -MQ Something.p/src_main.cpp.o -MF Something.p/src_main.cpp.o.d -o Something.p/src_main.cpp.o -c ../src/main.cpp",
+    "command": "c++ -ISugarHTTPS.p -I. -I.. -I../include -Xclang -fcolor-diagnostics -pipe -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++2a -g -MD -MQ SugarHTTPS.p/src_main.cpp.o -MF SugarHTTPS.p/src_main.cpp.o.d -o SugarHTTPS.p/src_main.cpp.o -c ../src/main.cpp",
     "file": "../src/main.cpp",
-    "output": "Something.p/src_main.cpp.o"
+    "output": "SugarHTTPS.p/src_main.cpp.o"
   }
 ]

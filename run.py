@@ -5,7 +5,7 @@
 import os
 
 # Name of the project, ideally copied from the meson.build file.
-project_name = "Something"
+project_name = "SugarHTTPS"
 
 # Colors class, just to make my day a little easier.
 class bcolors:
@@ -40,39 +40,50 @@ if isFile == True:
     print(f"{bcolors.HEADER}\n===================={bcolors.ENDC}\n")
 
 # If it doesn't, make one.
-if isFile == False:
-    print(f"{bcolors.HEADER}===================={bcolors.ENDC}\n")
-    print(f"{bcolors.WARNING}[BUILD FOLDER DOESN'T EXIST, MAKING ONE AND RUNNING NOW...]{bcolors.ENDC}\n")
-    print(f"{bcolors.HEADER}===================={bcolors.ENDC}\n")
-# Commands to do stuff:
-    # Make a meson build folder and then make an exec. with ninja.
-    os.system("touch meson.build && mkdir src && mkdir include && mkdir build && touch src/main.cpp && touch include/main.hpp")
-    meson_build_file = open('meson.build', 'a')
-    meson_build_file.write(
-    f"""project('{project_name}', ['cpp', 'c'])
+elif isFile == False:
+    doesSRCexist = os.path.exists("src/")
+    if doesSRCexist == True:
+        print(f"{bcolors.HEADER}===================={bcolors.ENDC}\n")
+        print(f"{bcolors.WARNING}[BUILD FOLDER DOESN'T EXIST, BUT SRC DOES. RUNNING NOW...]{bcolors.ENDC}\n")
+        print(f"{bcolors.HEADER}===================={bcolors.ENDC}\n")
+        os.system("meson build && ninja -C build")
+        # Run the executable
+        print(f"{bcolors.HEADER}\n===================={bcolors.ENDC}\n")
+        os.system("./build/" + project_name)
+        print(f"{bcolors.HEADER}\n===================={bcolors.ENDC}\n")
+    elif doesSRCexist == False:
+        print(f"{bcolors.HEADER}===================={bcolors.ENDC}\n")
+        print(f"{bcolors.WARNING}[BUILD FOLDER DOESN'T EXIST, MAKING ONE AND RUNNING NOW...]{bcolors.ENDC}\n")
+        print(f"{bcolors.HEADER}===================={bcolors.ENDC}\n")
+    # Commands to do stuff:
+        # Make a meson build folder and then make an exec. with ninja.
+        os.system("touch meson.build && mkdir src && mkdir include && mkdir build && touch src/main.cpp && touch include/main.hpp")
+        meson_build_file = open('meson.build', 'a')
+        meson_build_file.write(
+        f"""project('{project_name}', ['cpp', 'c'])
 incdir = include_directories(
     'include'
 )
 libs  = []
 executable('{project_name}', ['src/main.cpp'], include_directories: incdir, dependencies: libs)
-"""
-    )
-    meson_build_file.close()
+    """
+        )
+        meson_build_file.close()
 
-    cpp_file = open('src/main.cpp', 'a')
-    cpp_file.write(
-    """#include <iostream>
+        cpp_file = open('src/main.cpp', 'a')
+        cpp_file.write(
+        """#include <iostream>
 
 int main() {
     std::cout << 60 + 9;
 }
-    """
-    )
-    cpp_file.close()
+        """
+        )
+        cpp_file.close()
 
-    os.system("meson build && ninja -C build")
+        os.system("meson build && ninja -C build")
 
-    # Run the executable
-    print(f"{bcolors.HEADER}\n===================={bcolors.ENDC}\n")
-    os.system("./build/" + project_name)
-    print(f"{bcolors.HEADER}\n===================={bcolors.ENDC}\n")
+        # Run the executable
+        print(f"{bcolors.HEADER}\n===================={bcolors.ENDC}\n")
+        os.system("./build/" + project_name)
+        print(f"{bcolors.HEADER}\n===================={bcolors.ENDC}\n")
