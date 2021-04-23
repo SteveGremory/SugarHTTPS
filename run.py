@@ -5,7 +5,7 @@
 import os
 
 # Name of the project, ideally copied from the meson.build file.
-project_name = "SugarHTTPS"
+project_name = "Stuff"
 
 # Colors class, just to make my day a little easier.
 class bcolors:
