@@ -19,6 +19,8 @@ struct request {
 
     request& make_request();
 
+    void make_multiple_requests(std::vector<request> reqs);
+
     request& text();
     
     CURL *handle = curl_easy_init();

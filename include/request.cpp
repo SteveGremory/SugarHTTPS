@@ -35,7 +35,6 @@ request& request::download(char outfilename[FILENAME_MAX]) {
 request& request::get() {
     /* Add Opts. */
     curl_easy_setopt(handle, CURLOPT_URL, url);
-    curl_easy_setopt(handle, CURLOPT_WRITEDATA, NULL);
     curl_easy_setopt(handle, CURLOPT_FOLLOWLOCATION, true);
     curl_easy_setopt(handle, CURLOPT_IPRESOLVE, CURL_IPRESOLVE_V4);
     curl_easy_setopt(handle, CURLOPT_NOPROGRESS, 1);
@@ -43,6 +42,7 @@ request& request::get() {
     curl_easy_setopt(handle, CURLOPT_TCP_KEEPALIVE, 1L);
     curl_easy_setopt(handle, CURLOPT_SSL_VERIFYPEER, 1L);
     curl_easy_setopt(handle, CURLOPT_SSL_VERIFYHOST, 1L);
+    
 
     curl_easy_setopt(handle, CURLOPT_COOKIEFILE, "");
     curl_easy_setopt(handle, CURLOPT_COOKIE, "");
@@ -51,7 +51,7 @@ request& request::get() {
 
 request& request::make_request() {
     /* Remove comment if you want it to be verbose */
-    curl_easy_setopt(handle, CURLOPT_VERBOSE, 1L);
+    //curl_easy_setopt(handle, CURLOPT_VERBOSE, 1L);
     CURLcode response = curl_easy_perform(handle);
     
     if (response == CURLE_OK) {
