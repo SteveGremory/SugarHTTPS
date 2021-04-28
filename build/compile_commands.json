@@ -1,13 +1,13 @@
 [
   {
-    "directory": "/Users/stevegremory/Desktop/PANCAKE/subtract-something/build",
-    "command": "c++ -IStuff.p -I. -I.. -I../include -Xclang -fcolor-diagnostics -pipe -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++2a -g -MD -MQ Stuff.p/src_main.cpp.o -MF Stuff.p/src_main.cpp.o.d -o Stuff.p/src_main.cpp.o -c ../src/main.cpp",
+    "directory": "/home/stevegremory/Documents/GitHub/SugarHTTPS/build",
+    "command": "c++ -IStuff.p -I. -I.. -I../include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++2a -g -pthread -MD -MQ Stuff.p/src_main.cpp.o -MF Stuff.p/src_main.cpp.o.d -o Stuff.p/src_main.cpp.o -c ../src/main.cpp",
     "file": "../src/main.cpp",
     "output": "Stuff.p/src_main.cpp.o"
   },
   {
-    "directory": "/Users/stevegremory/Desktop/PANCAKE/subtract-something/build",
-    "command": "c++ -IStuff.p -I. -I.. -I../include -Xclang -fcolor-diagnostics -pipe -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++2a -g -MD -MQ Stuff.p/include_request.cpp.o -MF Stuff.p/include_request.cpp.o.d -o Stuff.p/include_request.cpp.o -c ../include/request.cpp",
+    "directory": "/home/stevegremory/Documents/GitHub/SugarHTTPS/build",
+    "command": "c++ -IStuff.p -I. -I.. -I../include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++2a -g -pthread -MD -MQ Stuff.p/include_request.cpp.o -MF Stuff.p/include_request.cpp.o.d -o Stuff.p/include_request.cpp.o -c ../include/request.cpp",
     "file": "../include/request.cpp",
     "output": "Stuff.p/include_request.cpp.o"
   }
