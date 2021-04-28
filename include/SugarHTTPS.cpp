@@ -126,6 +126,7 @@ request& request::make_request() {
         return *this;
         
     }
+    return *this;
 }
 
 /* PUBLIC: Function To Print The HTTP response text to the terminal. */
