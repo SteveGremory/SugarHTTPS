@@ -8,7 +8,8 @@ executable('main', 'src/main.cpp', link_with : sugar, dependencies: libs)
 
 pkg_mod = import('pkgconfig')
 pkg_mod.generate(libraries : sugar,
-                 version : '0.5.0',
-                 name : 'libsugarhttps',
-                 filebase : 'sugarhttps',
-                 description : 'A HTTPS Library to make Networking in C++ as easy as Python while being very fast.')
+                version : '0.5.0',
+                name : 'libsugarhttps',
+                filebase : 'sugarhttps',
+                install_dir : '/usr/lib/pkgconfig',
+                description : 'A HTTPS Library to make Networking in C++ as easy as Python while being very fast.')

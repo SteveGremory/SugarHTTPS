@@ -22,16 +22,16 @@ SugarHTTPS uses a the following open source projects to work properly:
 
 ## Installation
 
-Right now, You can only test the library as it's under heavy development and pre-alpha stages. To use the library just to test it out, do the following:
+To install the library, follow the given steps:
 
 1. Clone the repo
 2. make sure you have the following installed:
-
-- libcURL
-- The Meson Build System
-- CMake
-- pkgConfig
-- Python
+   - libcURL
+   - The Meson Build System
+   - CMake
+   - pkgConfig
+   - Python
+3. in the SugarHTTPS directory, run the following command: `sudo sh ./install.sh`
 
 ## License
 
