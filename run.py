@@ -41,7 +41,7 @@ if isFile == True:
 
 # If it doesn't, make one.
 elif isFile == False:
-    doesSRCexist = os.path.exists("src/")
+    doesSRCexist = os.path.exists("testing/")
     if doesSRCexist == True:
         print(f"{bcolors.HEADER}===================={bcolors.ENDC}\n")
         print(f"{bcolors.WARNING}[BUILD FOLDER DOESN'T EXIST, BUT SRC DOES. RUNNING NOW...]{bcolors.ENDC}\n")

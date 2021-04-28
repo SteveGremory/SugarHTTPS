@@ -34,4 +34,6 @@ private:
 
     static size_t print_to_terminal(char * buffer, size_t itemsize, size_t number_items, void* ignore);
 
+    static size_t print_nothing(char * buffer, size_t itemsize, size_t number_items, void* ignore);
+
 };

@@ -15,6 +15,9 @@ request &request::post() {
     /* Add the URL */
     curl_easy_setopt(handle, CURLOPT_URL, url);
 
+    /* Print nothing to the terminal by default */
+    curl_easy_setopt(handle, CURLOPT_WRITEFUNCTION, print_nothing);
+
     /* Headers */
     curl_easy_setopt(handle, CURLOPT_HTTPHEADER, list);     /* Add Headers */
     curl_easy_setopt(handle, CURLOPT_FOLLOWLOCATION, 1L);   /* Enable redirects */
@@ -56,9 +59,16 @@ request& request::download(char outfilename[FILENAME_MAX]) {
 
 /* GET REQUEST */
 request& request::get() {
-    /* Check if Speed is needed more than security */
+    
+    /* Set URL and such */
     curl_easy_setopt(handle, CURLOPT_URL, url);
+
+    /* Enable redirects */
     curl_easy_setopt(handle, CURLOPT_FOLLOWLOCATION, 1L);
+
+    /* Print nothing by default */
+    curl_easy_setopt(handle, CURLOPT_WRITEFUNCTION, print_nothing);
+    /* Check if Speed is needed more than security */
     if (speed_over_security == true) {
         /* Add Opts That make the request take less time. */
         curl_easy_setopt(handle, CURLOPT_IPRESOLVE, CURL_IPRESOLVE_V4);
@@ -152,5 +162,9 @@ size_t request::write_data(void *ptr, size_t size, size_t nmemb, FILE *stream) {
     return written; /* Return the response of the fwrite() function */
 }
 
+size_t request::print_nothing(char * buffer, size_t itemsize, size_t number_items, void* ignore) {
+    size_t bytes = itemsize * number_items;
+    return bytes;
+}
 /* ===================================================================================================================================== */
 /* FUNCTIONS SECTION ENDS */

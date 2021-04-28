@@ -1,14 +1,14 @@
 [
   {
-    "directory": "/home/stevegremory/Documents/GitHub/SugarHTTPS/build",
-    "command": "c++ -Ilibsugarhttps.so.0.5.0.p -I. -I.. -I../include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++2a -g -fPIC -MD -MQ libsugarhttps.so.0.5.0.p/include_SugarHTTPS.cpp.o -MF libsugarhttps.so.0.5.0.p/include_SugarHTTPS.cpp.o.d -o libsugarhttps.so.0.5.0.p/include_SugarHTTPS.cpp.o -c ../include/SugarHTTPS.cpp",
+    "directory": "/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/build",
+    "command": "c++ -Ilibsugarhttps.0.5.0.dylib.p -I. -I.. -I../include -Xclang -fcolor-diagnostics -pipe -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++2a -g -MD -MQ libsugarhttps.0.5.0.dylib.p/include_SugarHTTPS.cpp.o -MF libsugarhttps.0.5.0.dylib.p/include_SugarHTTPS.cpp.o.d -o libsugarhttps.0.5.0.dylib.p/include_SugarHTTPS.cpp.o -c ../include/SugarHTTPS.cpp",
     "file": "../include/SugarHTTPS.cpp",
-    "output": "libsugarhttps.so.0.5.0.p/include_SugarHTTPS.cpp.o"
+    "output": "libsugarhttps.0.5.0.dylib.p/include_SugarHTTPS.cpp.o"
   },
   {
-    "directory": "/home/stevegremory/Documents/GitHub/SugarHTTPS/build",
-    "command": "c++ -Imain.p -I. -I.. -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -g -MD -MQ main.p/src_main.cpp.o -MF main.p/src_main.cpp.o.d -o main.p/src_main.cpp.o -c ../src/main.cpp",
-    "file": "../src/main.cpp",
-    "output": "main.p/src_main.cpp.o"
+    "directory": "/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/build",
+    "command": "c++ -Imain.p -I. -I.. -Xclang -fcolor-diagnostics -pipe -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++2a -g -MD -MQ main.p/testing_main.cpp.o -MF main.p/testing_main.cpp.o.d -o main.p/testing_main.cpp.o -c ../testing/main.cpp",
+    "file": "../testing/main.cpp",
+    "output": "main.p/testing_main.cpp.o"
   }
 ]
