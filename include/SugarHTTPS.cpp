@@ -1,5 +1,5 @@
 /* For obvious reasons, include the header file */
-#include "request.hpp"
+#include "SugarHTTPS.hpp"
 
 
 /* REQUESTS SECTION */

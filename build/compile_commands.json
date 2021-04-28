@@ -1,14 +1,14 @@
 [
   {
     "directory": "/home/stevegremory/Documents/GitHub/SugarHTTPS/build",
-    "command": "c++ -IStuff.p -I. -I.. -I../include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++2a -g -pthread -MD -MQ Stuff.p/src_main.cpp.o -MF Stuff.p/src_main.cpp.o.d -o Stuff.p/src_main.cpp.o -c ../src/main.cpp",
-    "file": "../src/main.cpp",
-    "output": "Stuff.p/src_main.cpp.o"
+    "command": "c++ -IlibSugarHTTPS.so.0.5.0.p -I. -I.. -I../include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++2a -g -fPIC -MD -MQ libSugarHTTPS.so.0.5.0.p/include_SugarHTTPS.cpp.o -MF libSugarHTTPS.so.0.5.0.p/include_SugarHTTPS.cpp.o.d -o libSugarHTTPS.so.0.5.0.p/include_SugarHTTPS.cpp.o -c ../include/SugarHTTPS.cpp",
+    "file": "../include/SugarHTTPS.cpp",
+    "output": "libSugarHTTPS.so.0.5.0.p/include_SugarHTTPS.cpp.o"
   },
   {
     "directory": "/home/stevegremory/Documents/GitHub/SugarHTTPS/build",
-    "command": "c++ -IStuff.p -I. -I.. -I../include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++2a -g -pthread -MD -MQ Stuff.p/include_request.cpp.o -MF Stuff.p/include_request.cpp.o.d -o Stuff.p/include_request.cpp.o -c ../include/request.cpp",
-    "file": "../include/request.cpp",
-    "output": "Stuff.p/include_request.cpp.o"
+    "command": "c++ -Imain.p -I. -I.. -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -g -MD -MQ main.p/src_main.cpp.o -MF main.p/src_main.cpp.o.d -o main.p/src_main.cpp.o -c ../src/main.cpp",
+    "file": "../src/main.cpp",
+    "output": "main.p/src_main.cpp.o"
   }
 ]
