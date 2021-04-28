@@ -86,4 +86,4 @@ int main() {
         # Run the executable
         print(f"{bcolors.HEADER}\n===================={bcolors.ENDC}\n")
         os.system("./build/" + project_name)
-        print(f"{bcolors.HEADER}\n===================={bcolors.ENDC}\n")run.py
+        print(f"{bcolors.HEADER}\n===================={bcolors.ENDC}\n")
