@@ -33,6 +33,14 @@ To install the library, follow the given steps:
    - Python
 3. in the SugarHTTPS directory, run the following command: `sudo sh ./install.sh`
 
+## Usage
+
+To use SugarHTTPS in your projects:
+
+1.  Clone the repo, and install the library.
+2.  Include the header `SugarHTTPS.hpp` in the file you're using it in.
+3.  If you're using a build system that supports Pkg-Config, just Add SugarHTTPS as a dependency, if you're using terminal commands, link _both_ SugarHTTPS & libcURL.
+
 ## License
 
 GNU General Public License
