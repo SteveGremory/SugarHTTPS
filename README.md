@@ -10,7 +10,7 @@ SugarHTTPS is a part of the Sugar/Riemann Products suite, designed specifically 
 - GET Request
 - Downloading Files
 
-## Dependancies
+## Dependencies
 
 SugarHTTPS uses a the following open source projects to work properly:
 
