@@ -1,8 +1,0 @@
-[
-  {
-    "directory": "/Users/stevegremory/Desktop/PANCAKE/SugarHTTPS/build",
-    "command": "c++ -Ilibsugarhttps.0.5.0.dylib.p -I. -I.. -I../include -Xclang -fcolor-diagnostics -pipe -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++2a -g -MD -MQ libsugarhttps.0.5.0.dylib.p/include_SugarHTTPS.cpp.o -MF libsugarhttps.0.5.0.dylib.p/include_SugarHTTPS.cpp.o.d -o libsugarhttps.0.5.0.dylib.p/include_SugarHTTPS.cpp.o -c ../include/SugarHTTPS.cpp",
-    "file": "../include/SugarHTTPS.cpp",
-    "output": "libsugarhttps.0.5.0.dylib.p/include_SugarHTTPS.cpp.o"
-  }
-]

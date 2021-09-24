@@ -1,5 +1,5 @@
 /* For obvious reasons, include the header file */
-#include "SugarHTTPS.hpp"
+#include "SugarHTTPS.hh"
 
 
 /* REQUESTS SECTION */
@@ -107,6 +107,7 @@ request& request::make_request() {
         /* Get the response code. */
         long response_code;
         curl_easy_getinfo(handle, CURLINFO_RESPONSE_CODE, &response_code);
+        response_code = response;
         /* Print the response code */
         std::cout << "\nRequest Succeded! Response Code: " << response_code << '\n';
         /* Cleanup */
@@ -114,6 +115,7 @@ request& request::make_request() {
         curl_slist_free_all(list);
         fclose(fp);
         /* end. */
+        success = 0;
         return *this;
     } else if (response != CURLE_OK) {
         /* If the request fucked up, Just print why it fucked up */
@@ -123,6 +125,7 @@ request& request::make_request() {
         curl_slist_free_all(list);
         fclose(fp);
         /* end. */
+        success = -1;
         return *this;
         
     }

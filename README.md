@@ -15,7 +15,6 @@ SugarHTTPS is a part of the Sugar/Riemann Products suite, designed specifically 
 SugarHTTPS uses a the following open source projects to work properly:
 
 - [libcURL](https://curl.se/libcurl/)
-- [The Meson Build System](https://mesonbuild.com/)
 - [CMake](https://cmake.org/)
 - [pkgConfig](https://en.wikipedia.org/wiki/Pkg-config)
 - [Python](https://www.python.org/)

@@ -11,6 +11,8 @@ public:
     const char * data;
     curl_slist* list = NULL;
     bool speed_over_security = false;
+    int success = 0;
+    long response_code = 0;
 
     request& post();
 
