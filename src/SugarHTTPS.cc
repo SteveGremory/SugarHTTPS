@@ -1,12 +1,12 @@
 /* For obvious reasons, include the header file */
 #include "SugarHTTPS.hh"
 
-
 /* REQUESTS SECTION */
 /* ===================================================================================================================================== */
 
 /* POST REQUEST */
-request &request::post() {
+request& request::post()
+{
     /* Set Headers */
     for (int i = 0; i < headers.size(); i++) {
         list = curl_slist_append(list, headers.at(i));
@@ -19,12 +19,12 @@ request &request::post() {
     curl_easy_setopt(handle, CURLOPT_WRITEFUNCTION, print_nothing);
 
     /* Headers */
-    curl_easy_setopt(handle, CURLOPT_HTTPHEADER, list);     /* Add Headers */
-    curl_easy_setopt(handle, CURLOPT_FOLLOWLOCATION, 1L);   /* Enable redirects */
+    curl_easy_setopt(handle, CURLOPT_HTTPHEADER, list); /* Add Headers */
+    curl_easy_setopt(handle, CURLOPT_FOLLOWLOCATION, 1L); /* Enable redirects */
 
     /* Data */
-    curl_easy_setopt(handle, CURLOPT_POSTFIELDS, data);     /* Add the data */
-    curl_easy_setopt(handle, CURLOPT_POSTFIELDSIZE, -1L);   /* Set the post field's size */
+    curl_easy_setopt(handle, CURLOPT_POSTFIELDS, data); /* Add the data */
+    curl_easy_setopt(handle, CURLOPT_POSTFIELDSIZE, -1L); /* Set the post field's size */
 
     /* Same shit. */
     if (speed_over_security == true) {
@@ -44,11 +44,12 @@ request &request::post() {
 }
 
 /* DOWNLOAD REQUEST */
-request& request::download(char outfilename[FILENAME_MAX]) {
+request& request::download(std::string outfilename)
+{
     /* Open the file to write the bytes to */
-    fp = fopen(outfilename,"wb");
+    fp = fopen(outfilename.c_str(), "wb");
     /* Set opts */
-    curl_easy_setopt(handle, CURLOPT_URL, url);  
+    curl_easy_setopt(handle, CURLOPT_URL, url);
     curl_easy_setopt(handle, CURLOPT_FOLLOWLOCATION, 1L);
     /* Tell libcURL about the writing functions */
     curl_easy_setopt(handle, CURLOPT_WRITEFUNCTION, write_data);
@@ -58,8 +59,9 @@ request& request::download(char outfilename[FILENAME_MAX]) {
 }
 
 /* GET REQUEST */
-request& request::get() {
-    
+request& request::get()
+{
+
     /* Set URL and such */
     curl_easy_setopt(handle, CURLOPT_URL, url);
 
@@ -90,18 +92,18 @@ request& request::get() {
 /* ===================================================================================================================================== */
 /* REQUEST SECION ENDS */
 
-
 /* FUNCTIONS SECTION */
 /* ===================================================================================================================================== */
 
 /* PUBLIC: Function to be added at the end of every request, this is the part where your request is actually executed. */
-request& request::make_request() {
+request& request::make_request()
+{
     /* Remove comment if you want it to be verbose */
-    //curl_easy_setopt(handle, CURLOPT_VERBOSE, 1L);
+    // curl_easy_setopt(handle, CURLOPT_VERBOSE, 1L);
 
     /* Store response in a variable. */
     CURLcode response = curl_easy_perform(handle);
-    
+
     /* Check if request was successful */
     if (response == CURLE_OK) {
         /* Get the response code. */
@@ -119,7 +121,7 @@ request& request::make_request() {
         return *this;
     } else if (response != CURLE_OK) {
         /* If the request fucked up, Just print why it fucked up */
-        std::cout << "Request Failed: " <<  curl_easy_strerror(response) << '\n';
+        std::cout << "Request Failed: " << curl_easy_strerror(response) << '\n';
         /* Cleanup */
         curl_easy_cleanup(handle);
         curl_slist_free_all(list);
@@ -127,20 +129,21 @@ request& request::make_request() {
         /* end. */
         success = -1;
         return *this;
-        
     }
     return *this;
 }
 
 /* PUBLIC: Function To Print The HTTP response text to the terminal. */
-request& request::text() {
+request& request::text()
+{
     /* Letting libcURL know what to do with the acquired data */
     curl_easy_setopt(handle, CURLOPT_WRITEFUNCTION, print_to_terminal);
     return *this;
 }
 
 /* PRIVATE: Function to print the response to the terminal, Has to be a function because libcurl demands so. */
-size_t request::print_to_terminal(char * buffer, size_t itemsize, size_t number_items, void* ignore) {
+size_t request::print_to_terminal(char* buffer, size_t itemsize, size_t number_items, void* ignore)
+{
     /* Get the size of the response in bytes */
     size_t bytes = itemsize * number_items;
     /* Print the number of lines with the response. */
@@ -150,7 +153,7 @@ size_t request::print_to_terminal(char * buffer, size_t itemsize, size_t number_
     /* Print the actual response with the line numbering. */
     for (int i = 0; i < bytes; i++) {
         std::cout << buffer[i];
-        if (buffer[i] == '\n')  {
+        if (buffer[i] == '\n') {
             line_number++;
             std::cout << line_number << ": \t";
         }
@@ -161,12 +164,14 @@ size_t request::print_to_terminal(char * buffer, size_t itemsize, size_t number_
 }
 
 /* PRIVATE: Function to write to a file when downloading it. */
-size_t request::write_data(void *ptr, size_t size, size_t nmemb, FILE *stream) {
+size_t request::write_data(void* ptr, size_t size, size_t nmemb, FILE* stream)
+{
     size_t written = fwrite(ptr, size, nmemb, stream); /* Write the actual data */
     return written; /* Return the response of the fwrite() function */
 }
 
-size_t request::print_nothing(char * buffer, size_t itemsize, size_t number_items, void* ignore) {
+size_t request::print_nothing(char* buffer, size_t itemsize, size_t number_items, void* ignore)
+{
     size_t bytes = itemsize * number_items;
     return bytes;
 }
