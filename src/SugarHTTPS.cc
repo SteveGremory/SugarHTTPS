@@ -1,6 +1,17 @@
 /* For obvious reasons, include the header file */
 #include "SugarHTTPS.hh"
 
+request::~request()
+{
+
+    /* Cleanup */
+    curl_slist_free_all(list);
+    if (fp != NULL) {
+        fclose(fp);
+    }
+    curl_easy_cleanup(handle);
+}
+
 /* REQUESTS SECTION */
 /* ===================================================================================================================================== */
 
@@ -26,21 +37,8 @@ request& request::post()
     curl_easy_setopt(handle, CURLOPT_POSTFIELDS, data); /* Add the data */
     curl_easy_setopt(handle, CURLOPT_POSTFIELDSIZE, -1L); /* Set the post field's size */
 
-    /* Same shit. */
-    if (speed_over_security == true) {
-        /* TODO: Read more in detail about all this */
-        curl_easy_setopt(handle, CURLOPT_IPRESOLVE, CURL_IPRESOLVE_V4);
-        curl_easy_setopt(handle, CURLOPT_NOPROGRESS, 1);
-        curl_easy_setopt(handle, CURLOPT_NOSIGNAL, 1);
-        curl_easy_setopt(handle, CURLOPT_TCP_KEEPALIVE, 1L);
-        curl_easy_setopt(handle, CURLOPT_SSL_VERIFYPEER, 1L);
-        curl_easy_setopt(handle, CURLOPT_SSL_VERIFYHOST, 1L);
-        /* Do the TODO */
-        return *this;
-    } else {
-        /* end, return *this for chaining + */
-        return *this;
-    }
+    /* end, return *this for chaining + */
+    return *this;
 }
 
 /* DOWNLOAD REQUEST */
@@ -61,7 +59,6 @@ request& request::download(std::string outfilename)
 /* GET REQUEST */
 request& request::get()
 {
-
     /* Set URL and such */
     curl_easy_setopt(handle, CURLOPT_URL, url);
 
@@ -70,23 +67,9 @@ request& request::get()
 
     /* Print nothing by default */
     curl_easy_setopt(handle, CURLOPT_WRITEFUNCTION, print_nothing);
-    /* Check if Speed is needed more than security */
-    if (speed_over_security == true) {
-        /* Add Opts That make the request take less time. */
-        curl_easy_setopt(handle, CURLOPT_IPRESOLVE, CURL_IPRESOLVE_V4);
-        curl_easy_setopt(handle, CURLOPT_NOPROGRESS, 1);
-        curl_easy_setopt(handle, CURLOPT_NOSIGNAL, 1);
-        curl_easy_setopt(handle, CURLOPT_TCP_KEEPALIVE, 1L);
-        curl_easy_setopt(handle, CURLOPT_SSL_VERIFYPEER, 1L);
-        curl_easy_setopt(handle, CURLOPT_SSL_VERIFYHOST, 1L);
-        curl_easy_setopt(handle, CURLOPT_COOKIEFILE, "");
-        curl_easy_setopt(handle, CURLOPT_COOKIE, "");
-        /* TODO: UNDERSTAND WHAT ALL THOSE OPTS DO, DEEPLY. */
-        return *this;
-    } else {
-        /* End, return your bitch */
-        return *this;
-    }
+
+    /* End, return your bitch */
+    return *this;
 }
 
 /* ===================================================================================================================================== */
@@ -99,7 +82,7 @@ request& request::get()
 request& request::make_request()
 {
     /* Remove comment if you want it to be verbose */
-    // curl_easy_setopt(handle, CURLOPT_VERBOSE, 1L);
+    curl_easy_setopt(handle, CURLOPT_VERBOSE, 1L);
 
     /* Store response in a variable. */
     CURLcode response = curl_easy_perform(handle);
@@ -112,25 +95,16 @@ request& request::make_request()
         response_code = response;
         /* Print the response code */
         std::cout << "\nRequest Succeded! Response Code: " << response_code << '\n';
-        /* Cleanup */
-        curl_easy_cleanup(handle);
-        curl_slist_free_all(list);
-        fclose(fp);
         /* end. */
         success = 0;
         return *this;
     } else if (response != CURLE_OK) {
         /* If the request fucked up, Just print why it fucked up */
         std::cout << "Request Failed: " << curl_easy_strerror(response) << '\n';
-        /* Cleanup */
-        curl_easy_cleanup(handle);
-        curl_slist_free_all(list);
-        fclose(fp);
         /* end. */
         success = -1;
         return *this;
     }
-    return *this;
 }
 
 /* PUBLIC: Function To Print The HTTP response text to the terminal. */

@@ -9,11 +9,11 @@ file(GLOB SUGARHTTPS_SOURCES
 # Set C++ options
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_BUILD_TYPE Debug)
 
 # Set options for library compilation
 option(SUGARHTTPS_STATIC ON)
 option(SUGARHTTPS_INSTALL OFF)
-
 # Tell curl to not build the executable
 set(BUILD_CURL_EXE OFF)
 
