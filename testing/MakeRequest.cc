@@ -1,15 +1,15 @@
-#include <SugarHTTPS.hh>
+#include <SugarHTTPS.h>
+
+using namespace SugarHTTPS;
 
 int main()
 {
-    auto req = request {
-        .url = "https://google.com",
-    }
-                   .get()
-                   .make_request();
+    auto req = Request()
+                   .Get()
+                   .MakeRequest();
 
-    if (req.success == 0) {
+    if (!req.GetStatus())
         std::cout << "Request successful.\n";
-    }
+
     return 0;
 }

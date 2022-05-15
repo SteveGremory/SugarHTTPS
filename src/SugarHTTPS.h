@@ -4,6 +4,8 @@
 #include <iostream>
 #include <vector>
 
+typedef uint8_t RequestStatus;
+
 namespace SugarHTTPS
 {
         class Request
@@ -15,16 +17,6 @@ namespace SugarHTTPS
 
             const char* Data;
 
-            int Success = 0;
-
-            long ResponseCode = 0;
-
-            CURL* Handle;
-
-            curl_slist* List;
-
-            FILE* fp;
-
             Request& Post();
 
             Request& Download(std::string outfilename);
@@ -35,8 +27,23 @@ namespace SugarHTTPS
 
             Request& Text();
 
+            Request& SetUrl(char*);
+
+            RequestStatus GetStatus();
+
             Request();
             ~Request();
+
+        protected:
+            RequestStatus Success = 0;
+
+            long ResponseCode = 0;
+
+            CURL* Handle;
+
+            curl_slist* List;
+
+            FILE* fp;
 
         private:
             static size_t WriteData(void* ptr, size_t size, size_t nmemb, FILE* stream);

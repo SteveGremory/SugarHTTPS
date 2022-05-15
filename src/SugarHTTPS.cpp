@@ -13,7 +13,7 @@ namespace SugarHTTPS
         /* Cleanup */
         curl_slist_free_all(this->List);
 
-        if (fp != NULL)
+        if (fp != nullptr)
             fclose(fp);
 
         curl_easy_cleanup(this->Handle);
@@ -112,6 +112,19 @@ namespace SugarHTTPS
             return *this;
         }
     }
+
+    Request& Request::SetUrl(char* url)
+    {
+        this->Url = url;
+
+        return *this;
+    }
+
+    RequestStatus Request::GetStatus()
+    {
+        return this->Success;
+    }
+
 
     /* PUBLIC: Function To Print The HTTP response text to the terminal. */
     Request& Request::Text()
