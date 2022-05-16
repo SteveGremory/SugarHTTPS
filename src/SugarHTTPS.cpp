@@ -2,9 +2,26 @@
 
 namespace SugarHTTPS
 {
-    Request::Request() : Url(nullptr), Data(nullptr), Headers(std::vector<const char*>()), List(nullptr), Handle(nullptr), File(nullptr), Status(RequestStatus::Unknown), ResponseCode(0)
+    Request::Request() : Url(nullptr),
+                         Data(nullptr),
+                         Headers(std::vector<const char*>()),
+                         List(nullptr),
+                         File(nullptr),
+                         Status(RequestStatus::Unknown),
+                         ResponseCode(0)
     {
         this->Handle = curl_easy_init();
+    }
+
+    Request::Request(Request& request) : Url(request.Url),
+                                         Data(request.Data),
+                                         Headers(request.Headers),
+                                         List(request.List),
+                                         Handle(request.Handle),
+                                         File(request.File),
+                                         Status(request.Status),
+                                         ResponseCode(request.ResponseCode)
+    {
     }
 
     Request::~Request()

@@ -40,6 +40,7 @@ namespace SugarHTTPS
         RequestStatus GetStatus();
 
         Request();
+        Request(Request&);
 
         ~Request();
 
