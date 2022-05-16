@@ -35,6 +35,8 @@ namespace SugarHTTPS
 
         Request& SetUrl(char*);
 
+        Request& Flush();
+
         RequestStatus GetStatus();
 
         Request();

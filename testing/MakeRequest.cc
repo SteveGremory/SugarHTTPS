@@ -7,7 +7,7 @@ int main()
     auto req = Request()
                    .SetUrl("https://gnu.org/")
                    .Get()
-                   .MakeRequest();
+                   .MakeRequest().Flush();
 
 
     if (req.GetStatus() == RequestStatus::Success)

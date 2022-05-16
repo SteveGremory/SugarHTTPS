@@ -10,12 +10,26 @@ namespace SugarHTTPS
     Request::~Request()
     {
         /* Cleanup */
-        curl_slist_free_all(this->List);
+        if (this->List)
+        {
+            curl_slist_free_all(this->List);
 
-        if (File != nullptr)
+            this->List = nullptr;
+        }
+
+        if (this->File)
+        {
             fclose(File);
 
-        curl_easy_cleanup(this->Handle);
+            this->File = nullptr;
+        }
+
+        // if (this->Handle != nullptr)
+        // {
+            // curl_easy_cleanup(this->Handle);
+
+            this->Handle = nullptr;
+        // }
     }
 
     /* REQUESTS SECTION */
@@ -112,19 +126,6 @@ namespace SugarHTTPS
         }
     }
 
-    Request& Request::SetUrl(char* url)
-    {
-        this->Url = url;
-
-        return *this;
-    }
-
-    RequestStatus Request::GetStatus()
-    {
-        return this->Status;
-    }
-
-
     /* PUBLIC: Function To Print The HTTP response text to the terminal. */
     Request& Request::Text()
     {
@@ -132,6 +133,32 @@ namespace SugarHTTPS
         curl_easy_setopt(this->Handle, CURLOPT_WRITEFUNCTION, this->PrintToTerminal);
         return *this;
     }
+
+    /* Sets the Request URL to the provided one.  */
+    Request& Request::SetUrl(char* url)
+    {
+        this->Url = url;
+
+        return *this;
+    }
+
+    /* Clears the Handle object of the previous request. */
+    Request& Request::Flush()
+    {
+        if (!this->Handle)
+            return *this;
+
+        curl_easy_cleanup(this->Handle);
+
+        return *this;
+    }
+
+    /* Returns the status of execution of the current request. */
+    RequestStatus Request::GetStatus()
+    {
+        return this->Status;
+    }
+
 
     /* PRIVATE: Function to print the response to the terminal, Has to be a function because libcurl demands so. */
     size_t Request::PrintToTerminal(char* buffer, size_t itemsize, size_t number_items, void* ignore)
