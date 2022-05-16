@@ -1,15 +1,19 @@
-#include <SugarHTTPS.hh>
+#include <SugarHTTPS.h>
+
+using namespace SugarHTTPS;
 
 int main()
 {
-    auto req = request {
-        .url = "https://google.com",
-    }
-                   .get()
-                   .make_request();
+    auto req = Request()
+                   .SetUrl("https://gnu.org/")
+                   .Get()
+                   .MakeRequest().Flush();
 
-    if (req.success == 0) {
+
+    if (req.GetStatus() == RequestStatus::Success)
         std::cout << "Request successful.\n";
-    }
+    else
+        std::cout << "Request failed.\n";
+
     return 0;
 }

@@ -3,7 +3,7 @@ project("SugarHTTPS")
 
 # Get the CC files
 file(GLOB SUGARHTTPS_SOURCES 
-    "src/*.cc"
+    "src/*.cpp"
 )
 
 # Set C++ options

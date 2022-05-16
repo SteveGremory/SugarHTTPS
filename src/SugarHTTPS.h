@@ -1,4 +1,5 @@
 #pragma once
+
 #include <cstring>
 #include <curl/curl.h>
 #include <iostream>
@@ -6,43 +7,58 @@
 
 namespace SugarHTTPS
 {
-        class Request
-        {
-        public:
-            const char* Url;
+    enum class RequestStatus
+    {
+        Unknown,
+        Success,
+        Failure
+    };
 
-            std::vector<const char*> Headers;
+    class Request
+    {
+    public:
+        const char* Url;
 
-            const char* Data;
+        std::vector<const char*> Headers;
 
-            int Success = 0;
+        const char* Data;
 
-            long ResponseCode = 0;
+        Request& Post();
 
-            CURL* Handle;
+        Request& Download(std::string outfilename);
 
-            curl_slist* List;
+        Request& Get();
 
-            FILE* fp;
+        Request& MakeRequest();
 
-            Request& Post();
+        Request& Text();
 
-            Request& Download(std::string outfilename);
+        Request& SetUrl(char*);
 
-            Request& Get();
+        Request& Flush();
 
-            Request& MakeRequest();
+        RequestStatus GetStatus();
 
-            Request& Text();
+        Request();
 
-            Request();
-            ~Request();
+        ~Request();
 
-        private:
-            static size_t WriteData(void* ptr, size_t size, size_t nmemb, FILE* stream);
+    protected:
+        RequestStatus Status;
 
-            static size_t PrintToTerminal(char* buffer, size_t itemsize, size_t number_items, void* ignore);
+        long ResponseCode;
 
-            static size_t PrintNothing(char* buffer, size_t itemsize, size_t number_items, void* ignore);
-        };
+        CURL* Handle;
+
+        curl_slist* List;
+
+        FILE* File;
+
+    private:
+        static size_t WriteData(void* ptr, size_t size, size_t nmemb, FILE* stream);
+
+        static size_t PrintToTerminal(char* buffer, size_t itemsize, size_t number_items, void* ignore);
+
+        static size_t PrintNothing(char* buffer, size_t itemsize, size_t number_items, void* ignore);
+    };
 }
