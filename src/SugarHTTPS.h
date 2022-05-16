@@ -1,55 +1,62 @@
 #pragma once
+
 #include <cstring>
 #include <curl/curl.h>
 #include <iostream>
 #include <vector>
 
-typedef uint8_t RequestStatus;
-
 namespace SugarHTTPS
 {
-        class Request
-        {
-        public:
-            const char* Url;
+    enum class RequestStatus
+    {
+        Unknown,
+        Success,
+        Failure
+    };
 
-            std::vector<const char*> Headers;
+    class Request
+    {
+    public:
+        const char* Url;
 
-            const char* Data;
+        std::vector<const char*> Headers;
 
-            Request& Post();
+        const char* Data;
 
-            Request& Download(std::string outfilename);
+        Request& Post();
 
-            Request& Get();
+        Request& Download(std::string outfilename);
 
-            Request& MakeRequest();
+        Request& Get();
 
-            Request& Text();
+        Request& MakeRequest();
 
-            Request& SetUrl(char*);
+        Request& Text();
 
-            RequestStatus GetStatus();
+        Request& SetUrl(char*);
 
-            Request();
-            ~Request();
+        RequestStatus GetStatus();
 
-        protected:
-            RequestStatus Success = 0;
+        Request();
 
-            long ResponseCode = 0;
+        ~Request();
 
-            CURL* Handle;
+    protected:
+        RequestStatus Status;
 
-            curl_slist* List;
+        long ResponseCode;
 
-            FILE* fp;
+        CURL* Handle;
 
-        private:
-            static size_t WriteData(void* ptr, size_t size, size_t nmemb, FILE* stream);
+        curl_slist* List;
 
-            static size_t PrintToTerminal(char* buffer, size_t itemsize, size_t number_items, void* ignore);
+        FILE* File;
 
-            static size_t PrintNothing(char* buffer, size_t itemsize, size_t number_items, void* ignore);
-        };
+    private:
+        static size_t WriteData(void* ptr, size_t size, size_t nmemb, FILE* stream);
+
+        static size_t PrintToTerminal(char* buffer, size_t itemsize, size_t number_items, void* ignore);
+
+        static size_t PrintNothing(char* buffer, size_t itemsize, size_t number_items, void* ignore);
+    };
 }

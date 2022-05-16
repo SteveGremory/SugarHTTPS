@@ -1,9 +1,8 @@
-/* For obvious reasons, include the header file */
 #include "SugarHTTPS.h"
 
 namespace SugarHTTPS
 {
-    Request::Request() : fp(nullptr), List(nullptr)
+    Request::Request() : Url(nullptr), Data(nullptr), Headers(std::vector<const char*>()), List(nullptr), Handle(nullptr), File(nullptr), Status(RequestStatus::Unknown), ResponseCode(0)
     {
         this->Handle = curl_easy_init();
     }
@@ -13,8 +12,8 @@ namespace SugarHTTPS
         /* Cleanup */
         curl_slist_free_all(this->List);
 
-        if (fp != nullptr)
-            fclose(fp);
+        if (File != nullptr)
+            fclose(File);
 
         curl_easy_cleanup(this->Handle);
     }
@@ -51,13 +50,13 @@ namespace SugarHTTPS
     Request& Request::Download(std::string outfilename)
     {
         /* Open the file to write the bytes to */
-        fp = fopen(outfilename.c_str(), "wb");
+        File = fopen(outfilename.c_str(), "wb");
         /* Set opts */
         curl_easy_setopt(this->Handle, CURLOPT_URL, this->Url);
         curl_easy_setopt(this->Handle, CURLOPT_FOLLOWLOCATION, 1L);
         /* Tell libcURL about the writing functions */
         curl_easy_setopt(this->Handle, CURLOPT_WRITEFUNCTION, this->WriteData);
-        curl_easy_setopt(this->Handle, CURLOPT_WRITEDATA, fp);
+        curl_easy_setopt(this->Handle, CURLOPT_WRITEDATA, File);
         /* end, return *this for chaining */
         return *this;
     }
@@ -102,13 +101,13 @@ namespace SugarHTTPS
             /* Print the response code */
             std::cout << "\nRequest Succeded! Response Code: " << response_code << '\n';
             /* end. */
-            this->Success = 0;
+            this->Status = RequestStatus::Success;
             return *this;
         } else if (response != CURLE_OK) {
             /* If the Request fucked up, Just print why it fucked up */
             std::cout << "Request Failed: " << curl_easy_strerror(response) << '\n';
             /* end. */
-            this->Success = -1;
+            this->Status = RequestStatus::Failure;
             return *this;
         }
     }
@@ -122,7 +121,7 @@ namespace SugarHTTPS
 
     RequestStatus Request::GetStatus()
     {
-        return this->Success;
+        return this->Status;
     }
 
 
@@ -144,12 +143,12 @@ namespace SugarHTTPS
         std::cout << "Chunk Size: " << bytes << "\n";
         std::cout << line_number << ": \t";
         /* Print the actual response with the line numbering. */
-        for (int i = 0; i < bytes; i++) {
+        for (int i = 0; i < bytes; i++)
+        {
             std::cout << buffer[i];
-            if (buffer[i] == '\n') {
-                line_number++;
-                std::cout << line_number << ": \t";
-            }
+
+            if (buffer[i] == '\n')
+                std::cout << line_number++ << ": \t";
         }
         std::cout << "\n\n";
         /* Return the data acquired in bytes. */
@@ -159,14 +158,12 @@ namespace SugarHTTPS
     /* PRIVATE: Function to write to a file when downloading it. */
     size_t Request::WriteData(void* ptr, size_t size, size_t nmemb, FILE* stream)
     {
-        size_t written = fwrite(ptr, size, nmemb, stream); /* Write the actual data */
-        return written; /* Return the response of the fwrite() function */
+        return fwrite(ptr, size, nmemb, stream); /* Write the actual data */
     }
 
     size_t Request::PrintNothing(char* buffer, size_t itemsize, size_t number_items, void* ignore)
     {
-        size_t bytes = itemsize * number_items;
-        return bytes;
+        return (itemsize * number_items);
     }
     /* ===================================================================================================================================== */
     /* FUNCTIONS SECTION ENDS */
