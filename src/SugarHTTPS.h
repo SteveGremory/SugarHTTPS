@@ -5,61 +5,58 @@
 #include <iostream>
 #include <vector>
 
-namespace SugarHTTPS
-{
-    enum class RequestStatus
-    {
-        Unknown,
-        Success,
-        Failure
-    };
+namespace SugarHTTPS {
+enum class RequestStatus {
+    Unknown,
+    Success,
+    Failure
+};
 
-    class Request
-    {
-    public:
-        const char* Url;
+class Request {
+public:
+    const char* Url;
 
-        std::vector<const char*> Headers;
+    std::vector<const char*> Headers;
 
-        const char* Data;
+    const char* Data;
 
-        Request& Post();
+    Request& Post();
 
-        Request& Download(std::string outfilename);
+    Request& Download(std::string outfilename);
 
-        Request& Get();
+    Request& Get();
 
-        Request& MakeRequest();
+    Request& MakeRequest();
 
-        Request& Text();
+    Request& Text();
 
-        Request& SetUrl(char*);
+    Request& SetUrl(std::string url);
 
-        Request& Flush();
+    Request& Flush();
 
-        RequestStatus GetStatus();
+    RequestStatus GetStatus();
 
-        Request();
-        Request(Request&);
+    Request();
+    Request(Request&);
 
-        ~Request();
+    ~Request();
 
-    protected:
-        RequestStatus Status;
+protected:
+    RequestStatus Status;
 
-        long ResponseCode;
+    long ResponseCode;
 
-        CURL* Handle;
+    CURL* Handle;
 
-        curl_slist* List;
+    curl_slist* List;
 
-        FILE* File;
+    FILE* File;
 
-    private:
-        static size_t WriteData(void* ptr, size_t size, size_t nmemb, FILE* stream);
+private:
+    static size_t WriteData(void* ptr, size_t size, size_t nmemb, FILE* stream);
 
-        static size_t PrintToTerminal(char* buffer, size_t itemsize, size_t number_items, void* ignore);
+    static size_t PrintToTerminal(char* buffer, size_t itemsize, size_t number_items, void* ignore);
 
-        static size_t PrintNothing(char* buffer, size_t itemsize, size_t number_items, void* ignore);
-    };
+    static size_t PrintNothing(char* buffer, size_t itemsize, size_t number_items, void* ignore);
+};
 }

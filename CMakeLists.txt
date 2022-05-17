@@ -19,6 +19,7 @@ set(BUILD_CURL_EXE OFF)
 
 # add curl
 add_subdirectory("deps/curl")
+add_subdirectory("deps/spdlog")
 
 # Build static if static libs and vice-versa
 if (SUGARHTTPS_STATIC)
@@ -37,7 +38,7 @@ target_include_directories(SugarHTTPS PUBLIC "include" "deps/curl/include")
 unset(SUGARHTTPS_STATIC CACHE) 
 
 # Link cURL to SugarHTTPS
-target_link_libraries(SugarHTTPS libcurl)
+target_link_libraries(SugarHTTPS libcurl spdlog::spdlog)
 
 # Testing
 add_executable(test testing/MakeRequest.cc)
